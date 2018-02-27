@@ -1,0 +1,1250 @@
+@charset "UTF-8";
+/*
+	All rights reserved to Maria Coding
+	mariacoding.com | @mariacoding
+*/
+/*********************************/
+/*            HELPERS            */
+/*********************************/
+/* Sass Variables
+---------------------------------------------------------------- */
+/* Import Custom Fonts --------------------*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400");
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script");
+/* Fonts Variables*/
+/*----------------*/
+/*----------------*/
+/* Colors Variables*/
+/* NOTE:  WAVE validation BEFORE to assure ood contrast colors*/
+/* Gray, white and black */
+/* Yellow, red, blue and green */
+/* Color Palettes */
+/* Mixins*/
+/* End of Sass Variables
+---------------------------------------------------------------- */
+/*********************************/
+/*            BASE            */
+/*********************************/
+/* Typography
+---------------------------------------------------------------- */
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  color: #616161;
+  padding-top: 1%;
+  padding-bottom: 0.3%;
+  font-weight: 700;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 1.9em; }
+
+h1.inverse-color {
+  color: #f6f6f5; }
+
+h2 {
+  font-size: 1.8em; }
+
+h2.inverse-color {
+  color: #f2f2f2; }
+
+h3 {
+  font-size: 1.7em; }
+
+h3.inverse-color {
+  color: #f6f6f5; }
+
+h4 {
+  font-size: 1.6em; }
+
+h4.inverse-color {
+  color: #f6f6f5; }
+
+h5 {
+  font-size: 1.5em; }
+
+h5.inverse-color {
+  color: #c9c9c9; }
+
+h6 {
+  font-size: 1.4em; }
+
+h6.inverse-color {
+  color: #c9c9c9; }
+
+/* TEXT */
+p, span {
+  color: #616161;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.6; }
+
+p.inverse-color, span.inverse-color {
+  color: #f6f6f5; }
+
+p.dark-color, span.dark-color {
+  color: #3d3d3d; }
+
+a, a:link, a:visited {
+  font-size: inherit;
+  color: rgba(244, 153, 192, 0.5); }
+
+a:hover, a:focus {
+  font-size: inherit;
+  color: #7a7a7a; }
+
+a:active {
+  font-size: inherit;
+  color: #f499c0; }
+
+a:disabled {
+  font-size: inherit;
+  color: #c9c9c9; }
+
+/* Display */
+.display-1, .display-2, .display-3, .display-4 {
+  font-family: "Oleo Script", cursive;
+  color: #f499c0; }
+
+/* Lead body copy */
+.lead {
+  font-size: 1.6em;
+  font-weight: 400; }
+
+/* Emphasis */
+sub {
+  vertical-align: sub;
+  font-size: 0.6em; }
+
+sup {
+  vertical-align: super;
+  font-size: 0.6em; }
+
+small, .small {
+  font-size: 1em; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-size: 1em;
+  font-weight: 200;
+  font-style: italic; }
+
+article header p, article header span {
+  color: #616161;
+  font-size: 0.9em;
+  font-style: oblique; }
+article footer p, article footer span {
+  color: #616161;
+  font-size: 0.9em;
+  font-style: oblique; }
+
+/* Abbreviations */
+abbr {
+  text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-line: none;
+  /* do not use -moz-none of recomendation: https://developer.mozilla.org/en/docs/Web/CSS/text-decoration-style */ }
+
+.initialism {
+  font-size: 0.8em;
+  font-weight: 100; }
+
+/* Addresses */
+address {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2em;
+  font-weight: 300; }
+
+/* Blockquotes */
+blockquote, .blockquote {
+  font-family: "Oleo Script", cursive;
+  font-size: 1.3em; }
+  blockquote p, .blockquote p {
+    line-height: 1.3em; }
+  blockquote footer, blockquote .blockquote-footer, .blockquote footer, .blockquote .blockquote-footer {
+    font-size: 1em;
+    color: #616161;
+    font-family: "Ubuntu", sans-serif; }
+  blockquote blockquote::before, .blockquote blockquote::before {
+    content: open-quote; }
+  blockquote blockquote::after, .blockquote blockquote::after {
+    content: close-quote; }
+
+blockquote::first-letter, .blockquote::first-letter {
+  font-family: "Oleo Script", cursive;
+  font-weight: bold;
+  font-size: 200%;
+  vertical-align: baseline;
+  display: inline; }
+
+blockquote.dark-color {
+  color: #3d3d3d; }
+
+cite {
+  font-size: 1.15em;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif; }
+
+/* Lists */
+li {
+  display: list-item;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 0.3em;
+  text-indent: 0.6em; }
+
+/* unordered list */
+ul li {
+  font-size: 1.3em;
+  line-height: 1.6; }
+ul ul li {
+  font-size: 1.1em;
+  line-height: 100%; }
+ul ul li:first-child {
+  padding-top: 1%; }
+
+/* ordered list */
+ol {
+  counter-reset: section;
+  list-style-type: none;
+  margin: 0; }
+  ol li {
+    font-size: 1.3em;
+    display: table;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    line-height: 1.6; }
+    ol li ol li {
+      font-size: 1.1em;
+      margin-top: 0.3em;
+      margin-bottom: 0.3em; }
+  ol li::before {
+    counter-increment: section;
+    content: counters(section,".") ".";
+    padding-right: 0.6em; }
+
+/* unstyled list */
+.unstyled {
+  list-style-type: none; }
+
+/* inline list */
+ul.inline > li {
+  display: inline-block; }
+
+ol.inline > li {
+  display: inline-block; }
+
+/* description list */
+dl {
+  font-size: 1.3em;
+  line-height: 1.6; }
+  dl dt {
+    font-weight: bold;
+    font-size: 1.1em; }
+  dl dd {
+    font-size: 1.1em;
+    text-align: justify;
+    text-justify: inter-word; }
+
+.dl-horizontal {
+  margin-bottom: 0.3em; }
+
+/* Horizontal separation */
+hr {
+  box-shadow: inset 0 6px 6px -6px rgba(22, 22, 22, 0.3);
+  border: 0;
+  width: 100%;
+  min-height: 5px;
+  z-index: 999; }
+
+hr.inverse-color {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 1px -1px #f499c0;
+  width: 100%;
+  min-height: 1px;
+  z-index: 999; }
+
+hr.drop-shadow {
+  height: 1px;
+  box-shadow: inset 0 9px 9px -3px rgba(22, 22, 22, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
+
+/* Letter Fonts */
+.stack-letter {
+  font-family: "Rubik", sans-serif; }
+
+.headings-letter {
+  font-family: "Ubuntu", Helvetica, sans-serif; }
+
+.display-letter {
+  font-family: "Oleo Script", cursive; }
+
+.address-letter {
+  font-family: "Ubuntu", sans-serif; }
+
+.blockquotes-letter {
+  font-family: "Oleo Script", cursive;
+  font-size: 1.7em;
+  letter-spacing: 0.1em; }
+
+.clean-letter {
+  font-family: "Ubuntu", sans-serif; }
+
+.handletter {
+  font-family: "Oleo Script", cursive;
+  font-size: 1.8em;
+  letter-spacing: 0.1em; }
+
+.special-letter {
+  font-family: "Oleo Script", cursive; }
+
+/* Paragraph lines */
+.single-line-paragraph {
+  line-height: 1; }
+
+/* End of Typography
+---------------------------------------------------------------- */
+/* Style crossing all pages
+---------------------------------------------------------------- */
+/***************************************************************/
+/* Variables of STYLES CROSS ALL PAGES------------------------ */
+/* STYLE CROSS ALL PAGES--------------------------------------- */
+/****** GENERAL ******/
+html {
+  font-size: 18px;
+  background-color: #f6f6f5; }
+
+body {
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  background-size: cover;
+  color: #616161;
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  max-width: 1600px;
+  min-height: 100%;
+  min-height: 100vh; }
+
+main {
+  position: relative;
+  max-width: 800px; }
+  main .main-container {
+    background: #FFF;
+    width: 100%;
+    width: 100vw; }
+    main .main-container .logo-conner-img {
+      background-image: url("../images/logo-conner-xs.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      z-index: 3; }
+    main .main-container .main-text {
+      font-family: "Rubik", sans-serif;
+      padding: 2em;
+      opacity: 1;
+      z-index: 4; }
+
+footer {
+  background-color: #616161;
+  font-size: 0.8em;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  z-index: 1; }
+  footer .copyright-text {
+    color: #FFF;
+    width: 100%; }
+    footer .copyright-text .copyright-icon {
+      color: #f499c0;
+      text-shadow: 0.5px 0.5px #161616;
+      padding-top: 0.4em;
+      padding-left: 0.2em;
+      padding-right: 0.2em; }
+    footer .copyright-text .copyright-link {
+      color: #f499c0;
+      text-shadow: 0.5px 0.5px #161616;
+      text-decoration: underline;
+      padding-left: 0.2em; }
+    footer .copyright-text .copyright-link:hover {
+      color: #f2f2f2; }
+
+/* Background colors */
+.bg-faded {
+  background-color: #f2f2f2; }
+
+a.bg-faded:focus, a.bg-faded:hover {
+  background-color: #c9c9c9 !important; }
+
+.bg-black {
+  /* my class */
+  background-color: #161616 !important; }
+
+a.bg-black:focus, a.bg-black:hover {
+  background-color: #3d3d3d !important; }
+
+.bg-black-grid {
+  /* my class */
+  background-color: rgba(22, 22, 22, 0.3) !important; }
+
+a.bg-black-grid:focus, a.bg-black-grid:hover {
+  background-color: #c9c9c9 !important;
+  color: #f6f6f5; }
+
+.bg-white-grid {
+  /* my class */
+  background-color: rgba(255, 255, 255, 0.3) !important; }
+
+a.bg-white-grid:focus, a.bg-white-grid:hover {
+  background-color: #f2f2f2 !important; }
+
+.bg-gray-light-color {
+  background: #c9c9c9; }
+
+a.bg-gray-light-color:focus, a.bg-gray-light-color:hover {
+  background-color: #7a7a7a !important; }
+
+.bg-gray-color {
+  background: #7a7a7a; }
+
+a.bg-gray-color:focus, a.bg-gray-color:hover {
+  background-color: #c9c9c9 !important; }
+
+.bg-transparent {
+  background: transparent; }
+
+a.bg-transparent:focus, a.bg-transparent:hover {
+  background-color: rgba(22, 22, 22, 0.3) !important; }
+
+.bg-primary-dark {
+  /* my class */
+  background-color: #925b73 !important; }
+
+a.bg-primary-dark:focus, a.bg-primary-dark:hover {
+  background-color: #f499c0 !important; }
+
+.bg-primary {
+  background-color: #f499c0 !important; }
+
+a.bg-primary:focus, a.bg-primary:hover {
+  background-color: #925b73 !important; }
+
+.bg-primary-rgba {
+  /* my class */
+  background-color: rgba(244, 153, 192, 0.5) !important; }
+
+a.bg-primary-rgba:focus, a.bg-primary-rgba:hover {
+  background-color: #f499c0 !important; }
+
+.bg-inverse {
+  background-color: #3d3d3d !important; }
+
+a.bg-inverse:focus, a.bg-inverse:hover {
+  background-color: #161616 !important; }
+
+.bg-info {
+  background-color: #98EDF4 !important; }
+
+.bg-warning {
+  background-color: #f0bc76 !important; }
+
+.bg-sucess {
+  background-color: #98F4CC !important; }
+
+.bg-danger {
+  background-color: #770C3A !important; }
+
+/* Text Colors */
+.tx-base-color {
+  color: #616161; }
+
+.tx-dark-color {
+  color: #3d3d3d; }
+
+.tx-inverse-color {
+  color: #f6f6f5; }
+
+.text-muted, .tx-gray {
+  color: #7a7a7a; }
+
+.text-warning, .tx-yellow {
+  color: #f0bc76; }
+
+.text-error, .tx-red {
+  color: #770C3A; }
+
+.text-info, .tx-blue {
+  color: #98EDF4; }
+
+.text-success, .tx-green {
+  color: #98F4CC; }
+
+.tx-primary-color-dark {
+  color: #925b73; }
+
+.tx-primary-color {
+  color: #f499c0; }
+
+.tx-primary-color-rgba {
+  color: rgba(244, 153, 192, 0.5); }
+
+/****** BACKGROUND PATTERNS ******/
+/* End of Style crossing all pages
+---------------------------------------------------------------- */
+/*********************************/
+/*         COMPONENTS            */
+/*********************************/
+/* Navigation
+---------------------------------------------------------------- */
+/* Navigation Variables*/
+/* Navigation Style */
+.top-bar {
+  background-color: #161616;
+  color: rgba(244, 153, 192, 0.5);
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  height: 1.8em;
+  /* Language Navigation */
+  /* User Account & Card-shop*/ }
+  .top-bar .language-bar {
+    display: inline-block; }
+    .top-bar .language-bar .lang-name {
+      font-size: 0.7em; }
+      .top-bar .language-bar .lang-name .lang-name-item {
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding: 0; }
+        .top-bar .language-bar .lang-name .lang-name-item .lang-name-link:hover {
+          color: #7a7a7a; }
+        .top-bar .language-bar .lang-name .lang-name-item span {
+          color: #c9c9c9;
+          font-size: 0.8em;
+          text-align: center;
+          padding-left: 0.5em; }
+    .top-bar .language-bar .lang-name-item.active .lang-name-link {
+      font-weight: bold;
+      color: #f499c0; }
+    .top-bar .language-bar .lang-name-item.active .lang-name-link:hover, .top-bar .language-bar .lang-name-item.active .lang-name-link:focus {
+      font-weight: bold;
+      color: #925b73;
+      font-weight: bold; }
+  .top-bar .user-account a .fas,
+  .top-bar .card-shop a .fas {
+    color: #f499c0;
+    font-size: 1em;
+    font-weight: bold; }
+  .top-bar .user-account a span,
+  .top-bar .card-shop a span {
+    color: rgba(244, 153, 192, 0.5);
+    font-size: 0.7em;
+    text-transform: uppercase; }
+  .top-bar .user-account a:hover .fas, .top-bar .user-account a:focus .fas,
+  .top-bar .card-shop a:hover .fas,
+  .top-bar .card-shop a:focus .fas {
+    color: #7a7a7a; }
+  .top-bar .user-account a:hover span, .top-bar .user-account a:focus span,
+  .top-bar .card-shop a:hover span,
+  .top-bar .card-shop a:focus span {
+    color: #7a7a7a; }
+
+.container-brand-navbar {
+  width: 100%;
+  text-align: center;
+  /* Brand */
+  /* Navbar */ }
+  .container-brand-navbar .brand {
+    margin: 0 auto;
+    width: 50%;
+    max-height: 70%;
+    max-height: 70vh;
+    text-align: center; }
+    .container-brand-navbar .brand .brand-link .logo-img {
+      background-image: url("../images/logo-xs.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 250px;
+      height: 250px;
+      margin-top: 0.5em; }
+    .container-brand-navbar .brand .brand-text {
+      margin: 0;
+      padding: 0;
+      font-family: "Oleo Script", cursive;
+      color: #f499c0;
+      text-shadow: 0.5px 0.5px #616161; }
+    .container-brand-navbar .brand .social-media-container {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      width: 100%; }
+      .container-brand-navbar .brand .social-media-container .social-name-text {
+        color: #616161;
+        font-size: 1em;
+        padding-top: 0.2em; }
+        .container-brand-navbar .brand .social-media-container .social-name-text i {
+          color: #616161;
+          padding-left: 0.2em;
+          padding-right: 0.2em; }
+      .container-brand-navbar .brand .social-media-container .social-media .social-name-link {
+        text-decoration: none; }
+        .container-brand-navbar .brand .social-media-container .social-media .social-name-link .social-name-icon {
+          font-size: 2em;
+          color: #f499c0;
+          padding: 0 0.2em;
+          text-shadow: 0.5px 0.5px #616161; }
+      .container-brand-navbar .brand .social-media-container .social-media .social-name-link:hover .social-name-icon, .container-brand-navbar .brand .social-media-container .social-media .social-name-link:focus .social-name-icon {
+        color: #7a7a7a; }
+  .container-brand-navbar .navbar {
+    width: 100%; }
+    .container-brand-navbar .navbar .navbar-collapse .navbar-nav {
+      margin: 0;
+      padding: 0; }
+      .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item {
+        text-indent: 0; }
+        .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+          text-align: left;
+          padding: 0.1em;
+          margin: 0; }
+          .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link .nav-icon-item {
+            min-width: 2em;
+            font-size: 1.8em;
+            text-align: center;
+            color: rgba(244, 153, 192, 0.5); }
+          .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link .nav-text-item {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 0.7em;
+            color: #7a7a7a;
+            text-transform: uppercase;
+            text-align: center; }
+        .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover .nav-icon-item, .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:focus .nav-icon-item {
+          color: #7a7a7a; }
+        .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover .nav-text-item, .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:focus .nav-text-item {
+          color: #c9c9c9;
+          text-decoration: underline; }
+      .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link .nav-icon-item {
+        color: #f499c0; }
+      .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link span {
+        text-decoration: underline; }
+      .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item.active:hover .nav-link .nav-icon-item, .container-brand-navbar .navbar .navbar-collapse .navbar-nav .nav-item.active:focus .nav-link .nav-icon-item {
+        color: #7a7a7a; }
+
+/* End of Navigation
+---------------------------------------------------------------- */
+/* Jumbotron
+---------------------------------------------------------------- */
+/* End of Jumbotron
+---------------------------------------------------------------- */
+/* Images, videos, PDFs, Tables and Figures
+---------------------------------------------------------------- */
+/*----------------------*/
+/* End of Images, videos, PDFs, Tables and Figures
+---------------------------------------------------------------- */
+/*********************************/
+/*         PAGES           */
+/*********************************/
+/* HOME Page */
+/*********************************/
+/*         LAYOUT           */
+/*********************************/
+/* Media Queries
+---------------------------------------------------------------- */
+/********************************************/
+/*      Media Queries -CROSS ALL PAGES      */
+/********************************************/
+/*  Breaking points*/
+/*************************************************************************************************************/
+/*  Small devices (landscape phones, 34em and up >=544px) ***************************************************/
+@media (min-width: 544px) {
+  /****** GENERAL ******/
+  body {
+    font-size: 1.01em; }
+
+  main .logo-conner-img {
+    background-image: url("../images/logo-conner-sm.png");
+    width: 300px;
+    height: 300px; }
+
+  .container-brand-navbar {
+    /* Navbar */
+    /* Brand */ }
+    .container-brand-navbar .navbar {
+      width: 100%; }
+    .container-brand-navbar .brand .brand-link .logo-img {
+      background-image: url("../images/logo-sm.png");
+      width: 300px;
+      height: 300px; } }
+/* End of Media Queries - Small devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Medium devices (tablets, 48em and up >=768px) ***********************************************************/
+@media (min-width: 768px) {
+  body {
+    font-size: 1.02em; }
+
+  main {
+    position: absolute;
+    top: 10em;
+    left: 45%; }
+    main .main-container {
+      width: 50%;
+      width: 50vw;
+      height: 65%;
+      height: 65vh;
+      max-width: 50%;
+      max-width: 50vw;
+      z-index: 2; }
+      main .main-container .logo-conner-img {
+        background-image: url("../images/logo-conner-md.png");
+        width: 200px;
+        height: 200px; }
+
+  footer {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    /* = main-bg*/ }
+
+  .container-brand-navbar {
+    margin-top: 1.9em;
+    /* Brand */
+    /* Navbar */ }
+    .container-brand-navbar .brand {
+      width: 32%;
+      max-width: 32%; }
+      .container-brand-navbar .brand .brand-link {
+        height: 70%; }
+        .container-brand-navbar .brand .brand-link .logo-img {
+          background-image: url("../images/logo-md.png");
+          width: 400px;
+          height: 400px; }
+    .container-brand-navbar .navbar {
+      margin-right: 3em;
+      padding-right: 0;
+      width: 50%; }
+      .container-brand-navbar .navbar .nav-item {
+        width: 3.3em; }
+        .container-brand-navbar .navbar .nav-item .nav-link {
+          text-align: center !important; }
+      .container-brand-navbar .navbar .nav-text-item {
+        display: block; } }
+/*End of Media Queries - Medium devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Large devices (Large desktops, 62em and up ≥992px) -Non-Retina Screens *********************/
+@media (min-width: 992px) {
+  /****** GENERAL ******/
+  main .main-container .logo-conner-img {
+    background-image: url("../images/logo-conner-lg.png");
+    width: 250px;
+    height: 250px; }
+
+  .container-brand-navbar {
+    /* Brand */
+    /* Navbar */ }
+    .container-brand-navbar .brand .brand-link .logo-img {
+      background-image: url("../images/logo-lg.png");
+      width: 500px;
+      height: 500px; }
+    .container-brand-navbar .navbar .nav-item {
+      width: 4em; } }
+/*End of Media Queries - Large devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Extra large devices (Extra large desktops, 75em and up ≥1200px) -Non-Retina Screens *********************/
+@media (min-width: 1200px) {
+  /****** GENERAL ******/
+  main .main-container {
+    width: 100%; }
+    main .main-container .logo-conner-img {
+      background-image: url("../images/logo-conner-xl.png");
+      width: 300px;
+      height: 300px; }
+
+  .container-brand-navbar {
+    /* Brand */
+    /* Navbar */ }
+    .container-brand-navbar .brand .brand-link .logo-img {
+      background-image: url("../images/logo-xl.png");
+      width: 600px;
+      height: 600px; }
+    .container-brand-navbar .brand .brand-text {
+      padding-top: 2em; }
+    .container-brand-navbar .navbar .nav-item {
+      width: 5em; } }
+/*End of Media Queries - Extra large devices -Non-Retina Screens
+---------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Extra large devices (Extra large desktops, 75em and up ≥1200px) -RETINA Screens *************************/
+/*End of Media Queries - Extra large devices - RETINA Screens
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Extra large devices (XXL Larg desktops, 93.75 and up ≥1500px) -Non-Retina Screens ***********************/
+@media (min-width: 1500px) {
+  /****** GENERAL ******/ }
+/*End of Media Queries - Extra large devices -Retina Screens
+---------------------------------------------------------------------------------------------------------- */
+/*********************************/
+/*   Media Queries - THYPOGRAPHY  */
+/*********************************/
+/*************************************************************************************************************/
+/*  Small devices (landscape phones, 34em and up >=544px) ***************************************************/
+@media (min-width: 544px) {
+  /* HEADINGS */
+  h1 {
+    font-size: 1.919em; }
+
+  h2 {
+    font-size: 1.818em; }
+
+  h3 {
+    font-size: 1.717em; }
+
+  h4 {
+    font-size: 1.616em; }
+
+  h5 {
+    font-size: 1.515em; }
+
+  h6 {
+    font-size: 1.414em; }
+
+  h6.inverse-color {
+    color: #c9c9c9; }
+
+  /* TEXT */
+  p, span {
+    font-size: 1.111em; }
+
+  /* Lead body copy */
+  .lead {
+    font-size: 1.616em; }
+
+  /* Emphasis */
+  sub {
+    font-size: 0.606em; }
+
+  sup {
+    font-size: 0.606em; }
+
+  small, .small {
+    font-size: 1.01em; }
+
+  em {
+    font-size: 1.01em; }
+
+  article header p, article header span {
+    font-size: 0.909em; }
+  article footer p, article footer span {
+    font-size: 0.909em; }
+
+  .initialism {
+    font-size: 0.808em; }
+
+  /* Addresses */
+  address {
+    font-size: 1.212em; }
+
+  /* Blockquotes */
+  blockquote, .blockquote {
+    font-size: 1.111em; }
+    blockquote p, .blockquote p {
+      line-height: 1.111em; }
+    blockquote footer, blockquote .blockquote-footer, .blockquote footer, .blockquote .blockquote-footer {
+      font-size: 1.01em; }
+
+  cite {
+    font-size: 1.1615em; }
+
+  /* Block of Code */
+  code, pre, .blockcode {
+    font-size: 1.212em; }
+    code p, code span, pre p, pre span, .blockcode p, .blockcode span {
+      font-size: 1.212em; }
+
+  /* Lists */
+  li {
+    font-size: 1.111em; }
+
+  /* unordered list */
+  ul li {
+    font-size: 1.111em; }
+  ul ul li {
+    font-size: 1.111em; }
+
+  /* ordered list */
+  ol li {
+    font-size: 1.111em; }
+    ol li ol li {
+      font-size: 1.111em; }
+
+  /* description list */
+  dl {
+    font-size: 1.111em; }
+    dl dt {
+      font-size: 1.111em; }
+    dl dd {
+      font-size: 1.111em; }
+
+  /* Letter Fonts */
+  .handletter {
+    font-size: 1.818em; }
+
+  .handwrite-text {
+    font-size: 1.414em; } }
+/* End of Media Queries - Small devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Medium devices (tablets, 48em and up >=768px) ***********************************************************/
+@media (min-width: 768px) {
+  /* HEADINGS */
+  h1 {
+    font-size: 1.938em; }
+
+  h2 {
+    font-size: 1.836em; }
+
+  h3 {
+    font-size: 1.734em; }
+
+  h4 {
+    font-size: 1.632em; }
+
+  h5 {
+    font-size: 1.53em; }
+
+  h6 {
+    font-size: 1.428em; }
+
+  h6.inverse-color {
+    color: #c9c9c9; }
+
+  /* TEXT */
+  p, span {
+    font-size: 1.122em; }
+
+  /* Lead body copy */
+  .lead {
+    font-size: 1.632em; }
+
+  /* Emphasis */
+  sub {
+    font-size: 0.612em; }
+
+  sup {
+    font-size: 0.612em; }
+
+  small, .small {
+    font-size: 1.02em; }
+
+  em {
+    font-size: 1.02em; }
+
+  article header p, article header span {
+    font-size: 0.918em; }
+  article footer p, article footer span {
+    font-size: 0.918em; }
+
+  .initialism {
+    font-size: 0.816em; }
+
+  /* Addresses */
+  address {
+    font-size: 1.224em; }
+
+  /* Blockquotes */
+  blockquote, .blockquote {
+    font-size: 1.122em; }
+    blockquote p, .blockquote p {
+      line-height: 1.122em; }
+    blockquote footer, blockquote .blockquote-footer, .blockquote footer, .blockquote .blockquote-footer {
+      font-size: 1.02em; }
+
+  cite {
+    font-size: 1.173em; }
+
+  /* Block of Code */
+  code, pre, .blockcode {
+    font-size: 1.224em; }
+    code p, code span, pre p, pre span, .blockcode p, .blockcode span {
+      font-size: 1.224em; }
+
+  /* Lists */
+  li {
+    font-size: 1.122em; }
+
+  /* unordered list */
+  ul li {
+    font-size: 1.122em; }
+  ul ul li {
+    font-size: 1.122em; }
+
+  /* ordered list */
+  ol li {
+    font-size: 1.122em; }
+    ol li ol li {
+      font-size: 1.122em; }
+
+  /* description list */
+  dl {
+    font-size: 1.122em; }
+    dl dt {
+      font-size: 1.122em; }
+    dl dd {
+      font-size: 1.122em; }
+
+  /* Letter Fonts */
+  .handletter {
+    font-size: 1.836em; }
+
+  .handwrite-text {
+    font-size: 1.428em; } }
+/*End of Media Queries - Medium devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Large devices (desktops, 62em and up >=992px) ***********************************************************/
+@media (min-width: 992px) {
+  /* HEADINGS */
+  h1 {
+    font-size: 1.957em; }
+
+  h2 {
+    font-size: 1.854em; }
+
+  h3 {
+    font-size: 1.751em; }
+
+  h4 {
+    font-size: 1.648em; }
+
+  h5 {
+    font-size: 1.545em; }
+
+  h6 {
+    font-size: 1.442em; }
+
+  h6.inverse-color {
+    color: #c9c9c9; }
+
+  /* TEXT */
+  p, span {
+    font-size: 1.133em; }
+
+  /* Lead body copy */
+  .lead {
+    font-size: 1.648em; }
+
+  /* Emphasis */
+  sub {
+    font-size: 0.618em; }
+
+  sup {
+    font-size: 0.618em; }
+
+  small, .small {
+    font-size: 1.03em; }
+
+  em {
+    font-size: 1.03em; }
+
+  article header p, article header span {
+    font-size: 0.927em; }
+  article footer p, article footer span {
+    font-size: 0.927em; }
+
+  .initialism {
+    font-size: 0.824em; }
+
+  /* Addresses */
+  address {
+    font-size: 1.236em; }
+
+  /* Blockquotes */
+  blockquote, .blockquote {
+    font-size: 1.133em; }
+    blockquote p, .blockquote p {
+      line-height: 1.133em; }
+    blockquote footer, blockquote .blockquote-footer, .blockquote footer, .blockquote .blockquote-footer {
+      font-size: 1.03em; }
+
+  cite {
+    font-size: 1.1845em; }
+
+  /* Block of Code */
+  code, pre, .blockcode {
+    font-size: 1.236em; }
+    code p, code span, pre p, pre span, .blockcode p, .blockcode span {
+      font-size: 1.236em; }
+
+  /* Lists */
+  li {
+    font-size: 1.133em; }
+
+  /* unordered list */
+  ul li {
+    font-size: 1.133em; }
+  ul ul li {
+    font-size: 1.133em; }
+
+  /* ordered list */
+  ol li {
+    font-size: 1.133em; }
+    ol li ol li {
+      font-size: 1.133em; }
+
+  /* description list */
+  dl {
+    font-size: 1.133em; }
+    dl dt {
+      font-size: 1.133em; }
+    dl dd {
+      font-size: 1.133em; }
+
+  /* Letter Fonts */
+  .handletter {
+    font-size: 1.854em; }
+
+  .handwrite-text {
+    font-size: 1.442em; } }
+/*End of Media Queries - Large devices
+---------------------------------------------------------------------------------------------------------- */
+/*************************************************************************************************************/
+/*  Extra large devices (Extra large desktops, 75em and up ≥1200px) -Non-Retina Screens *********************/
+@media (min-width: 1200px) {
+  /* HEADINGS */
+  h1 {
+    font-size: 1.976em; }
+
+  h2 {
+    font-size: 1.872em; }
+
+  h3 {
+    font-size: 1.768em; }
+
+  h4 {
+    font-size: 1.664em; }
+
+  h5 {
+    font-size: 1.56em; }
+
+  h6 {
+    font-size: 1.456em; }
+
+  h6.inverse-color {
+    color: #c9c9c9; }
+
+  /* TEXT */
+  p, span {
+    font-size: 1.144em; }
+
+  /* Lead body copy */
+  .lead {
+    font-size: 1.664em; }
+
+  /* Emphasis */
+  sub {
+    font-size: 0.624em; }
+
+  sup {
+    font-size: 0.624em; }
+
+  small, .small {
+    font-size: 1.04em; }
+
+  em {
+    font-size: 1.04em; }
+
+  article header p, article header span {
+    font-size: 0.936em; }
+  article footer p, article footer span {
+    font-size: 0.936em; }
+
+  .initialism {
+    font-size: 0.832em; }
+
+  /* Addresses */
+  address {
+    font-size: 1.248em; }
+
+  /* Blockquotes */
+  blockquote, .blockquote {
+    font-size: 1.144em; }
+    blockquote p, .blockquote p {
+      line-height: 1.144em; }
+    blockquote footer, blockquote .blockquote-footer, .blockquote footer, .blockquote .blockquote-footer {
+      font-size: 1.04em; }
+
+  cite {
+    font-size: 1.196em; }
+
+  /* Block of Code */
+  code, pre, .blockcode {
+    font-size: 1.248em; }
+    code p, code span, pre p, pre span, .blockcode p, .blockcode span {
+      font-size: 1.248em; }
+
+  /* Lists */
+  li {
+    font-size: 1.144em; }
+
+  /* unordered list */
+  ul li {
+    font-size: 1.144em; }
+  ul ul li {
+    font-size: 1.144em; }
+
+  /* ordered list */
+  ol li {
+    font-size: 1.144em; }
+    ol li ol li {
+      font-size: 1.144em; }
+
+  /* description list */
+  dl {
+    font-size: 1.144em; }
+    dl dt {
+      font-size: 1.144em; }
+    dl dd {
+      font-size: 1.144em; }
+
+  /* Letter Fonts */
+  .handletter {
+    font-size: 1.872em; }
+
+  .handwrite-text {
+    font-size: 1.456em; } }
+/*End of Media Queries - Extra large devices -Non-Retina Screens
+---------------------------------------------------------------- */
+/* End of Media Queries
+---------------------------------------------------------------- */
+
+/*# sourceMappingURL=main-style.css.map */
